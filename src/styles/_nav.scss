@@ -1,0 +1,87 @@
+.nav__Main {
+  background: #18262f;
+}
+
+.nav__Container {
+  width: 90%;
+  margin: auto;
+  min-height: 10vh;
+
+  @include flex(space-around, center, row);
+
+  .logo {
+    flex: 1 1 40rem;
+    h1 {
+      font-family: "Righteous", cursive;
+      font-size: $header1;
+      color: white;
+      font-weight: lighter;
+    }
+  }
+}
+
+.menu__Container {
+  z-index: 4;
+}
+
+.menu__Active {
+  z-index: 4;
+  cursor: pointer;
+  position: fixed;
+  right: 5%;
+}
+.side__Menu {
+  position: fixed;
+  background: #18262f;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  transform: translateX(0%);
+  z-index: 3;
+  transition: transform 1s ease;
+
+  @include flex(space-around, center, column);
+  ul {
+    height: 50%;
+    width: 100%;
+    list-style: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: $header4;
+    text-align: center;
+    @include flex(space-around, center, column);
+  }
+}
+
+.side__Menu ul li {
+  cursor: pointer;
+  padding: 2rem 0rem;
+  &:hover {
+    background: whitesmoke;
+    color: red;
+    width: 100%;
+    cursor: pointer;
+    padding: 2rem 0rem;
+  }
+}
+
+.side__Close {
+  position: fixed;
+  z-index: 3;
+  background: #18262f;
+  height: 100%;
+  width: 100%;
+  top: 0%;
+  transform: translateX(100%);
+  transition: transform 1s ease;
+  @include flex(space-around, center, column);
+  ul {
+    height: 50%;
+    list-style: none;
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-size: $header4;
+    text-align: center;
+    @include flex(space-around, center, column);
+  }
+}

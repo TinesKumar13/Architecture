@@ -1,0 +1,29 @@
+.second__Main {
+  background: #18262f;
+}
+
+.second__Container {
+  width: 90%;
+  margin: auto;
+  @include flex(space-around, center, row);
+  flex-wrap: wrap;
+  min-height: 100vh;
+
+  header {
+    font-family: "Montserrat", sans-serif;
+    color: whitesmoke;
+    font-size: $header4;
+    align-self: flex-start;
+    flex: 1 1 60rem;
+  }
+
+  .image__Container {
+    flex: 1 1 60rem;
+
+    img {
+      position: absolute;
+      top: 90%;
+      z-index: 2;
+    }
+  }
+}

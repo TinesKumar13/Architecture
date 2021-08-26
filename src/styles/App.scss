@@ -1,0 +1,224 @@
+$header1: 4rem;
+$header2: 2rem;
+$header3: 1.8rem;
+$header4: 3rem;
+$text: 1rem;
+$small-text: 0.8rem;
+$nav-text: 1rem;
+
+@mixin flex($justify, $align, $direction) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-direction: $direction;
+}
+
+@import "global";
+@import "nav";
+@import "first";
+@import "second";
+@import "third";
+@import "fourth";
+@import "fifth";
+@import "footer";
+
+@media screen and (max-width: 984px) {
+  html {
+    font-size: 50%;
+  }
+
+  .image__Holder .rectangle {
+    height: 80%;
+    width: 100%;
+  }
+
+  .description__Text {
+    @include flex(center, center, column);
+    margin-top: 6rem;
+  }
+}
+
+@media screen and (min-width: 1431px) {
+  .image__Holder .rectangle {
+    height: 100%;
+    width: 100%;
+  }
+
+  .image__Holder {
+    .line__Deco {
+      height: 100%;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1336px) {
+  .second__Container {
+    @include flex(space-around, center, row);
+    flex-wrap: wrap;
+    width: 90%;
+    margin: auto;
+
+    header {
+      font-family: "Montserrat", sans-serif;
+      color: whitesmoke;
+      font-size: $header4;
+      padding: 3rem 0rem;
+      flex: 1 1 60rem;
+    }
+
+    .image__Container {
+      flex: 1 1 60rem;
+      @include flex(center, center, row);
+
+      img {
+        position: static;
+        width: 80%;
+        height: 70%;
+      }
+    }
+  }
+
+  .cover__Div {
+    display: none;
+  }
+
+  .third__Container {
+    @include flex(center, center, column);
+    flex-wrap: wrap;
+
+    .info__Container {
+      position: static;
+    }
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 42.5%;
+  }
+
+  .info__Container {
+    width: 100%;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  html {
+    font-size: 32.5%;
+  }
+
+  .info__Container {
+    width: 100%;
+  }
+
+  .second__Container {
+    header {
+      align-self: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 280px) {
+  html {
+    font-size: 25%;
+  }
+  .third__Description {
+    h2 {
+      font-size: 0.3rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1536px) {
+  .fourth__Container {
+    @include flex(center, center, column);
+  }
+
+  .text__One,
+  .text__Two,
+  .text__Four {
+    color: whitesmoke;
+    font-size: $header3;
+    font-family: "Montserrat", sans-serif;
+    text-align: center;
+    border: none;
+    width: 100%;
+    height: 100%;
+    position: static;
+    padding: 3rem 0rem;
+    h2 {
+      position: static;
+    }
+
+    p {
+      padding: 1rem 2rem;
+      position: static;
+    }
+
+    img {
+      position: static;
+    }
+  }
+
+  .text__Three {
+    align-self: center;
+    position: static;
+    text-align: center;
+    .building {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      padding: 3rem 0rem;
+    }
+
+    h2 {
+      position: static;
+      z-index: 1;
+      color: whitesmoke;
+      font-size: $header4;
+      font-family: "Montserrat", sans-serif;
+    }
+    .three__Image {
+      position: static;
+      z-index: 1;
+      width: 20%;
+      height: 20%;
+      object-fit: cover;
+      padding: 1rem 0rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 486px) {
+  .fifth__Container {
+    text-align: center;
+    margin: 0;
+    width: 100%;
+    header {
+      margin: 0rem 2rem;
+      .learn__More {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1505px) {
+  .icons__Main {
+    text-align: center;
+
+    .icons__Container {
+      padding: 1rem 0rem;
+      img {
+        height: 6%;
+        width: 6%;
+      }
+    }
+  }
+  .details__Main {
+    margin-top: 4rem;
+  }
+}

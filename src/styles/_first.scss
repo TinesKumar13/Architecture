@@ -1,0 +1,56 @@
+.first__Main {
+  background: #18262f;
+}
+
+.first__Container {
+  min-height: 90vh;
+  width: 90%;
+  margin: auto;
+  @include flex(center, center, row);
+  flex-wrap: wrap;
+
+  .description__Text {
+    flex: 1 1 40rem;
+    position: relative;
+
+    h1 {
+      font-family: "Montserrat", sans-serif;
+      font-size: $header1;
+      color: white;
+      font-weight: lighter;
+      line-height: 5rem;
+    }
+
+    .learn__More {
+      font-family: "Righteous", cursive;
+      color: #ea3d3c;
+      padding: 2rem 1rem;
+
+      @include flex(flex-start, center, row);
+    }
+
+    h2 {
+      letter-spacing: 0.5rem;
+      padding-right: 1rem;
+    }
+  }
+
+  .image__Holder {
+    flex: 1 1 40rem;
+  }
+}
+
+.image__Holder {
+  .rectangle {
+    z-index: 2;
+    position: relative;
+  }
+}
+.image__Holder {
+  .line__Deco {
+    position: absolute;
+    top: 0%;
+    right: 0%;
+    z-index: 1;
+  }
+}

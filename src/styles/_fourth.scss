@@ -1,0 +1,74 @@
+.fourth__Main {
+  background: #ea3d3c;
+}
+
+.fourth__Container {
+  display: grid;
+  min-height: 80vh;
+  width: 100%;
+  margin: auto;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+}
+
+.text__One,
+.text__Two,
+.text__Four {
+  grid-row: 1/5;
+
+  color: whitesmoke;
+  font-size: $header3;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+  border: 2px solid #970303;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  h2 {
+    position: absolute;
+    top: 40%;
+    left: 35%;
+  }
+
+  p {
+    padding: 1rem 2rem;
+    position: absolute;
+    top: 50%;
+  }
+
+  img {
+    position: absolute;
+    left: 10%;
+    top: 60%;
+  }
+}
+
+.text__Three {
+  grid-row: 3/4;
+  align-self: center;
+  position: relative;
+
+  .building {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    grid-row: 1/5;
+    grid-column: 3/4;
+  }
+
+  h2 {
+    position: absolute;
+    bottom: 30%;
+    left: 5%;
+    z-index: 1;
+    color: whitesmoke;
+    font-size: $header4;
+    font-family: "Montserrat", sans-serif;
+  }
+  .three__Image {
+    position: absolute;
+    bottom: 18%;
+    left: 5%;
+    z-index: 1;
+  }
+}

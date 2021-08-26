@@ -1,0 +1,52 @@
+.fifth__Main {
+  background: #f5f4f2;
+}
+
+.fifth__Container {
+  width: 90%;
+  margin: auto;
+  min-height: 80vh;
+  @include flex(center, center, row);
+  flex-wrap: wrap;
+
+  .image__Container {
+    flex: 2 1 45rem;
+
+    img {
+      width: 70%;
+      height: 70%;
+    }
+  }
+
+  header {
+    flex: 1 1 40rem;
+
+    h1 {
+      font-family: "Montserrat", sans-serif;
+      font-size: $header4;
+      font-weight: lighter;
+      span {
+        color: #ea3d3c;
+      }
+    }
+
+    p {
+      font-family: "Montserrat", sans-serif;
+      font-size: $header2;
+      font-weight: lighter;
+      color: #8e8e8e;
+      padding: 2rem 0rem;
+    }
+
+    .learn__More {
+      display: flex;
+      align-items: center;
+      h3 {
+        font-family: "Righteous", cursive;
+        color: #ea3d3c;
+        font-size: $header3;
+        letter-spacing: 1rem;
+      }
+    }
+  }
+}
